@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the MapOptions class from the options library, for the Dart programming language.">
+  <title>MapOptions class - options library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">vietmap_flutter_navigation</a></li>
+    <li><a href="../models_options/models_options-library.html">models&#47;options.dart</a></li>
+    <li class="self-crumb">MapOptions class</li>
+  </ol>
+  <div class="self-name">MapOptions</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="models_options&#47;models_options-library-sidebar.html"
+    data-below-sidebar="models_options&#47;MapOptions-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">MapOptions</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>Configuration options for the MapBoxNavigation.</p>
+<p>When used to change configuration, null values will be interpreted as
+'do not change this configuration option'.</p>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="MapOptions" class="callable">
+          <span class="name"><a href="../models_options/MapOptions/MapOptions.html">MapOptions</a></span><span class="signature">({<span class="parameter" id="-param-initialLatitude"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span> <span class="parameter-name">initialLatitude</span>, </span><span class="parameter" id="-param-initialLongitude"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span> <span class="parameter-name">initialLongitude</span>, </span><span class="parameter" id="-param-language"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">language</span>, </span><span class="parameter" id="-param-zoom"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span> <span class="parameter-name">zoom</span>, </span><span class="parameter" id="-param-apiKey"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">apiKey</span>, </span><span class="parameter" id="-param-mapStyle"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">mapStyle</span>, </span><span class="parameter" id="-param-bearing"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span> <span class="parameter-name">bearing</span>, </span><span class="parameter" id="-param-tilt"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span> <span class="parameter-name">tilt</span>, </span><span class="parameter" id="-param-alternatives"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">alternatives</span>, </span><span class="parameter" id="-param-mode"><span class="type-annotation"><a href="../models_navmode/MapNavigationMode.html">MapNavigationMode</a>?</span> <span class="parameter-name">mode</span>, </span><span class="parameter" id="-param-units"><span class="type-annotation"><a href="../models_voice_units/VoiceUnits.html">VoiceUnits</a>?</span> <span class="parameter-name">units</span>, </span><span class="parameter" id="-param-allowsUTurnAtWayPoints"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">allowsUTurnAtWayPoints</span>, </span><span class="parameter" id="-param-enableRefresh"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">enableRefresh</span>, </span><span class="parameter" id="-param-voiceInstructionsEnabled"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">voiceInstructionsEnabled</span>, </span><span class="parameter" id="-param-bannerInstructionsEnabled"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">bannerInstructionsEnabled</span>, </span><span class="parameter" id="-param-longPressDestinationEnabled"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">longPressDestinationEnabled</span>, </span><span class="parameter" id="-param-simulateRoute"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">simulateRoute</span>, </span><span class="parameter" id="-param-customLocationCenterIcon"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-typed_data/Uint8List-class.html">Uint8List</a>?</span> <span class="parameter-name">customLocationCenterIcon</span>, </span><span class="parameter" id="-param-isOptimized"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">isOptimized</span>, </span><span class="parameter" id="-param-mapStyleUrlDay"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">mapStyleUrlDay</span>, </span><span class="parameter" id="-param-mapStyleUrlNight"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">mapStyleUrlNight</span>, </span><span class="parameter" id="-param-padding"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/painting/EdgeInsets-class.html">EdgeInsets</a>?</span> <span class="parameter-name">padding</span>, </span><span class="parameter" id="-param-animateBuildRoute"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">animateBuildRoute</span>, </span><span class="parameter" id="-param-trackCameraPosition"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">trackCameraPosition</span>, </span><span class="parameter" id="-param-showReportFeedbackButton"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">showReportFeedbackButton</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-showEndOfRouteFeedback"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">showEndOfRouteFeedback</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-isCustomizeUI"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">isCustomizeUI</span> = <span class="default-value">false</span></span>})</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="allowsUTurnAtWayPoints" class="property">
+  <span class="name"><a href="../models_options/MapOptions/allowsUTurnAtWayPoints.html">allowsUTurnAtWayPoints</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  If the value of this property is true, a returned route may require an
+immediate U-turn at an intermediate waypoint. At an intermediate waypoint,
+if the value of this property is false, each returned route may continue
+straight ahead or turn to either side but may not U-turn. This property
+has no effect if only two waypoints are specified.
+same as 'not continueStraight' on Android
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="alternatives" class="property">
+  <span class="name"><a href="../models_options/MapOptions/alternatives.html">alternatives</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  When true, alternate routes will be presented
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="animateBuildRoute" class="property">
+  <span class="name"><a href="../models_options/MapOptions/animateBuildRoute.html">animateBuildRoute</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  Should animate the building of the Route. Default is True
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="apiKey" class="property">
+  <span class="name"><a href="../models_options/MapOptions/apiKey.html">apiKey</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  Vietmap routing api key, contact vietmap.vn to get a key
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="bannerInstructionsEnabled" class="property">
+  <span class="name"><a href="../models_options/MapOptions/bannerInstructionsEnabled.html">bannerInstructionsEnabled</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="bearing" class="property">
+  <span class="name"><a href="../models_options/MapOptions/bearing.html">bearing</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span>
+  
+
+</dt>
+<dd>
+  Bearing is the direction that the camera is pointing in and
+measured in degrees clockwise from north.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="customLocationCenterIcon" class="property">
+  <span class="name"><a href="../models_options/MapOptions/customLocationCenterIcon.html">customLocationCenterIcon</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-typed_data/Uint8List-class.html">Uint8List</a>?</span>
+  
+
+</dt>
+<dd>
+  Location center custom icon, get by call <code>VietMapHelper.getBytesFromAsset('assetsPath')</code>
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="enableRefresh" class="property">
+  <span class="name"><a href="../models_options/MapOptions/enableRefresh.html">enableRefresh</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="initialLatitude" class="property">
+  <span class="name"><a href="../models_options/MapOptions/initialLatitude.html">initialLatitude</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span>
+  
+
+</dt>
+<dd>
+  The initial Latitude of the Map View
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="initialLongitude" class="property">
+  <span class="name"><a href="../models_options/MapOptions/initialLongitude.html">initialLongitude</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span>
+  
+
+</dt>
+<dd>
+  The initial Longitude of the Map View
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="isCustomizeUI" class="property">
+  <span class="name"><a href="../models_options/MapOptions/isCustomizeUI.html">isCustomizeUI</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="isOptimized" class="property">
+  <span class="name"><a href="../models_options/MapOptions/isOptimized.html">isOptimized</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  if true, will reorder the routes to optimize navigation for time and
+shortest distance using the Travelling Salesman Algorithm.
+Always false for now
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="language" class="property">
+  <span class="name"><a href="../models_options/MapOptions/language.html">language</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  2-letter ISO 639-1 code for language. This property affects the sentence
+contained within the RouteStep.instructions property, but it does not
+affect any road names contained in that property or other properties
+such as RouteStep.name. Defaults to 'en' if an unsupported language
+is specified. The languages in this link are supported:
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="longPressDestinationEnabled" class="property">
+  <span class="name"><a href="../models_options/MapOptions/longPressDestinationEnabled.html">longPressDestinationEnabled</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  When the user long presses on a point on the map, set that
+as the destination
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="mapStyle" class="property">
+  <span class="name"><a href="../models_options/MapOptions/mapStyle.html">mapStyle</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  Vietmap map style url, contact vietmap.vn to get a map style url
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="mapStyleUrlDay" class="property">
+  <span class="name"><a href="../models_options/MapOptions/mapStyleUrlDay.html">mapStyleUrlDay</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  The Url of the style the Navigation MapView should use during the day
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="mapStyleUrlNight" class="property">
+  <span class="name"><a href="../models_options/MapOptions/mapStyleUrlNight.html">mapStyleUrlNight</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  The Url of the style the Navigation MapView should use at night
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="mode" class="property">
+  <span class="name"><a href="../models_options/MapOptions/mode.html">mode</a></span>
+  <span class="signature">&#8596; <a href="../models_navmode/MapNavigationMode.html">MapNavigationMode</a>?</span>
+  
+
+</dt>
+<dd>
+  The navigation mode desired. Defaults to drivingWithTraffic
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="padding" class="property">
+  <span class="name"><a href="../models_options/MapOptions/padding.html">padding</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/painting/EdgeInsets-class.html">EdgeInsets</a>?</span>
+  
+
+</dt>
+<dd>
+  Padding applied to the MapView when embedded
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Type-class.html">Type</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="showEndOfRouteFeedback" class="property">
+  <span class="name"><a href="../models_options/MapOptions/showEndOfRouteFeedback.html">showEndOfRouteFeedback</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  In iOS this will show/hide the end of route page when navigation is done. Default to True.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="showReportFeedbackButton" class="property">
+  <span class="name"><a href="../models_options/MapOptions/showReportFeedbackButton.html">showReportFeedbackButton</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  In iOS this will show/hide the feedback button. Default to True.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="simulateRoute" class="property">
+  <span class="name"><a href="../models_options/MapOptions/simulateRoute.html">simulateRoute</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  if true will simulate the route as if you were driving.
+Always true on iOS Simulator
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="tilt" class="property">
+  <span class="name"><a href="../models_options/MapOptions/tilt.html">tilt</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span>
+  
+
+</dt>
+<dd>
+  Tilt is the camera's angle from the nadir (directly facing the Earth)
+and uses unit degrees. The camera's minimum (default) tilt is 0 degrees,
+and the maximum tilt is 60. Tilt levels use six decimal point of
+precision, which enables you to restrict/set/lock a map's bearing
+with extreme precision.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="trackCameraPosition" class="property">
+  <span class="name"><a href="../models_options/MapOptions/trackCameraPosition.html">trackCameraPosition</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  If true, the map will continuously update the user location
+when the location changes. Defaults to true.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="units" class="property">
+  <span class="name"><a href="../models_options/MapOptions/units.html">units</a></span>
+  <span class="signature">&#8596; <a href="../models_voice_units/VoiceUnits.html">VoiceUnits</a>?</span>
+  
+
+</dt>
+<dd>
+  The unit of measure said in voice instructions
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="voiceInstructionsEnabled" class="property">
+  <span class="name"><a href="../models_options/MapOptions/voiceInstructionsEnabled.html">voiceInstructionsEnabled</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="zoom" class="property">
+  <span class="name"><a href="../models_options/MapOptions/zoom.html">zoom</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span>
+  
+
+</dt>
+<dd>
+  Zoom controls the scale of the map and consumes any value between 0
+and 22. At zoom level 0, the viewport shows continents and other world
+features. A middle value of 11 will show city level details, and at a
+higher zoom level, the map will begin to show buildings and
+points of interest.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toMap" class="callable">
+  <span class="name"><a href="../models_options/MapOptions/toMap.html">toMap</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="updatesMap" class="callable">
+  <span class="name"><a href="../models_options/MapOptions/updatesMap.html">updatesMap</a></span><span class="signature">(<wbr><span class="parameter" id="updatesMap-param-newOptions"><span class="type-annotation"><a href="../models_options/MapOptions-class.html">MapOptions</a></span> <span class="parameter-name">newOptions</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">vietmap_flutter_navigation</a></li>
+    <li><a href="../models_options/models_options-library.html">options</a></li>
+    <li class="self-crumb">MapOptions class</li>
+</ol>
+
+
+    <h5>options library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    vietmap_flutter_navigation
+      2.1.2
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="vietmap_flutter_navigation API docs, for the Dart programming language.">
+  <title>vietmap_flutter_navigation - Dart API docs</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="https://maps.vietmap.vn">vietmap_flutter_navigation package</a></li>
+  </ol>
+  <div class="self-name">vietmap_flutter_navigation</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      
+<section class="desc markdown">
+  <h1 id="vietmap-flutter-navigation">Vietmap Flutter Navigation</h1>
+<p><a href="https://vietmap.vn/maps-api"><img src="https://bizweb.dktcdn.net/100/415/690/themes/804206/assets/logo.png?1689561872933" height="40"> </a></p><p></p>
+<p>Contact <a href="https://bit.ly/vietmap-api">vietmap.vn</a> to register a valid key.</p>
+<!-- [Tài liệu tiếng Việt](./README.vi.md) -->
+<h2 id="getting-started">Getting started</h2>
+<p>Add library to <code>pubspec.yaml</code> file</p>
+<pre class="language-yaml"><code class="language-yaml">  vietmap_flutter_navigation: latest_version
+</code></pre>
+<p>Check the latest version at <a href="https://pub.dev/packages/vietmap_flutter_navigation">https://pub.dev/packages/vietmap_flutter_navigation</a></p>
+<p>or run this command in the terminal to add the library to the project:</p>
+<pre class="language-bash"><code class="language-bash">  flutter pub add vietmap_flutter_navigation
+</code></pre>
+<h2 id="android-config">Android config</h2>
+<p>Add the below code to the build.gradle (project) file at path <strong>android/build.gradle</strong></p>
+<pre class="language-gradle"><code class="language-gradle"> maven { url "https://jitpack.io" }
+</code></pre>
+<p>at the repositories block</p>
+<pre class="language-gradle"><code class="language-gradle">  allprojects {
+      repositories {
+          google()
+          mavenCentral()
+          maven { url "https://jitpack.io" }
+      }
+  }
+</code></pre>
+<p>Upgrade the minSdkVersion to a minimum is 24 in the build.gradle (app) file, at path <strong>android/app/build.gradle</strong></p>
+<pre class="language-gradle"><code class="language-gradle">  minSdkVersion 24
+</code></pre>
+<h2 id="ios-config">iOS config</h2>
+<p>Add the below codes to the Info.plist file. Replace the <strong><code>YOUR_API_KEY_HERE</code></strong> with your API key.</p>
+<pre class="language-ruby"><code class="language-ruby">  &lt;key&gt;VietMapURL&lt;/key&gt;
+  &lt;string&gt;https://maps.vietmap.vn/api/maps/light/styles.json?apikey=YOUR_API_KEY_HERE&lt;/string&gt;
+  &lt;key&gt;VietMapAPIBaseURL&lt;/key&gt;
+  &lt;string&gt;https://maps.vietmap.vn/api/navigations/route/&lt;/string&gt;
+  &lt;key&gt;VietMapAccessToken&lt;/key&gt;
+  &lt;string&gt;YOUR_API_KEY_HERE&lt;/string&gt;  
+  &lt;key&gt;NSLocationAlwaysAndWhenInUseUsageDescription&lt;/key&gt;
+  &lt;string&gt;Your request location description&lt;/string&gt;
+  &lt;key&gt;NSLocationAlwaysUsageDescription&lt;/key&gt;
+  &lt;string&gt;Your request location description&lt;/string&gt;
+  &lt;key&gt;NSLocationWhenInUseUsageDescription&lt;/key&gt;
+  &lt;string&gt;Your request location description&lt;/string&gt;
+</code></pre>
+<p>Upgrade min ios version to 12.0 in the Podfile (iOS) file, at path <strong>ios/Podfile</strong> (uncomment the line below)</p>
+<pre class="language-ruby"><code class="language-ruby">  platform :ios, '12.0' 
+</code></pre>
+<p>In your terminal, cd to the ios folder and run the command below to install the pod file <code>(you can skip this step if you only build for Android or run the app on the Windows/Linux PC)</code></p>
+<pre class="language-bash"><code class="language-bash">  cd ios &amp;&amp; pod install
+</code></pre>
+<ul>
+<li>If the project shows an issue when upgrading to the new version when running the <code>pod install</code> command, please remove the <code>ios/.symlinks</code>, <code>ios/Pods</code> folders, and <code>Podfile.lock</code> file, then run the <code>pod install --repo-update</code> command to update the pod file.</li>
+</ul>
+<h2 id="main-characteristics">Main characteristics</h2>
+<h3 id="import-the-library">Import the library</h3>
+<pre class="language-dart"><code class="language-dart">  import 'package:vietmap_flutter_navigation/vietmap_flutter_navigation.dart';
+</code></pre>
+<h3 id="define-necessary-variables">Define necessary variables</h3>
+<pre class="language-dart"><code class="language-dart">  // Define the map options
+  late MapOptions _navigationOption;
+
+  final _vietmapNavigationPlugin = VietMapNavigationPlugin();
+
+  List&lt;LatLng&gt; waypoints = const [
+    LatLng(10.759091, 106.675817),
+    LatLng(10.762528, 106.653099)
+  ];
+  /// Display the guide instruction image to the next turn 
+  Widget instructionImage = const SizedBox.shrink();
+
+  Widget recenterButton = const SizedBox.shrink();
+  
+  /// RouteProgressEvent contains the route information, current location, next turn, distance, duration,...
+  /// This variable is update real time when the navigation is started
+  RouteProgressEvent? routeProgressEvent;
+  
+  /// The controller to control the navigation, such as start, stop, recenter, overview,... 
+  MapNavigationViewController? _navigationController;
+</code></pre>
+<p>Add the <code>initialize</code> function to <code>initState</code> function to initialize the map options</p>
+<pre class="language-dart"><code class="language-dart">  @override
+  void initState() {
+    super.initState();
+    initialize();
+  }
+
+  Future&lt;void&gt; initialize() {
+    if (!mounted) return;
+    _navigationOption = _vietmapNavigationPlugin.getDefaultOptions();
+    /// set the simulate route to true to test the navigation without the real location
+    _navigationOption.simulateRoute = false;
+
+    _navigationOption.apiKey =
+        'YOUR_API_KEY_HERE';
+    _navigationOption.mapStyle =
+        "https://maps.vietmap.vn/api/maps/light/styles.json?apikey=YOUR_API_KEY_HERE";
+
+    _vietmapNavigationPlugin.setDefaultOptions(_navigationOption);
+  }
+</code></pre>
+<ul>
+<li>Replace <code>your apikey</code> which is provided by VietMap with <code>YOUR_API_KEY_HERE</code> tag to the application works normally</li>
+</ul>
+<h3 id="display-the-navigation-view-including-map-view-route-and-navigation">Display the Navigation view, including map view, route, and navigation</h3>
+<pre class="language-dart"><code class="language-dart">  NavigationView(
+    mapOptions: _navigationOption,
+    onMapCreated: (controller) {
+      _navigationController = controller;
+    },
+    onRouteProgressChange: (RouteProgressEvent routeProgressEvent) {
+      setState(() {
+        this.routeProgressEvent = routeProgressEvent;
+      });
+      _setInstructionImage(routeProgressEvent.currentModifier,
+          routeProgressEvent.currentModifierType);
+    },
+  ),
+</code></pre>
+<ul>
+<li>In the <code>routeProgressEvent</code> response, we provide the <code>currentLocation</code> and <code>snappedLocation</code>, which are the raw location of the device and the snapped location on the route, respectively. You can use one of them to track the location of the device.</li>
+</ul>
+<h3 id="set-the-instruction-icon-from-routeprogressevent-data">Set the instruction icon from routeProgressEvent data.</h3>
+<pre class="language-dart"><code class="language-dart">  _setInstructionImage(String? modifier, String? type) {
+    if (modifier != null &amp;&amp; type != null) {
+      List&lt;String&gt; data = [
+        type.replaceAll(' ', '_'),
+        modifier.replaceAll(' ', '_')
+      ];
+      String path = 'assets/navigation_symbol/${data.join('_')}.svg';
+      setState(() {
+        instructionImage = SvgPicture.asset(path, color: Colors.white);
+      });
+    }
+  }
+</code></pre>
+<p>We use <a href="https://pub.dev/packages/flutter_svg">flutter_svg</a> to display the SVG image.</p>
+<p>Instruction icon <a href="https://vietmapcorp-my.sharepoint.com/:u:/g/personal/thanhdt_vietmap_vn/EU0Heb0gMh1KtgCaoy5oih8BrOL6YKPWJUO-vXeGBp99hA?e=woyAvH">here</a>, download, extract, and add to the assets folder.</p>
+<p>Figma design for the instruction <a href="https://www.figma.com/file/rWyQ5TNtt6E5l8tPEE9Tkl/VietMap-navigation-symbol?type=design&amp;node-id=1:457&amp;mode=design&amp;t=yszRZCTouxAdYXXJ-1">here</a>, please copy and design your own icon.</p>
+<h3 id="build-a-route-between-two-locations">Build a route between two locations</h3>
+<ul>
+<li>We provide the <code>buildRoute</code> function to build a route between two locations. You can add more than 2 locations to the <code>wayPoints</code> variable.</li>
+</ul>
+<div style="width:100%; text-align:center">
+  <img src="https://github.com/vietmap-company/vietmap-flutter-navigation/raw/main/images/navigation.gif" alt="Vietmap navigation demo gif" width="400">
+</div>
+<ul>
+<li>We're adding the <code>onMapLongClick</code> callback to the <code>NavigationView</code> to build a route when the user long clicks on the map.</li>
+</ul>
+<pre class="language-dart"><code class="language-dart">  NavigationView(
+
+        ...
+  
+        onMapLongClick: (LatLng? latLng, Point? point) {
+          if (latLng == null) return;
+          _navigationController?.buildRoute(wayPoints: [
+            /// Replace the latitude and longitude with your origin location
+            LatLng(10.759173, 106.675879),
+            latLng
+          ], profile: DrivingProfile.cycling);
+        },
+      ),
+</code></pre>
+<h3 id="start-navigation-when-the-route-is-built-successfully">Start navigation when the route is built successfully</h3>
+<ul>
+<li>We provide the <code>onRouteBuilt</code> callback which responds the route when it is built successfully. Only the first route of the response list will be returned.</li>
+<li>We provide the <code>onNewRouteSelected</code> callback which responds the route while the user selects another route from the map.</li>
+</ul>
+<pre class="language-dart"><code class="language-dart">  NavigationView(
+
+    ...
+
+    onRouteBuilt: (DirectionRoute route) {
+      
+    },
+    onNewRouteSelected: (DirectionRoute route) {
+      
+    },
+  ),
+</code></pre>
+<ul>
+<li>You can start the navigation when the route is built successfully by calling the <code>_navigationController?.startNavigation</code> function.</li>
+</ul>
+<pre class="language-dart"><code class="language-dart">  _navigationController?.startNavigation();
+</code></pre>
+<h3 id="add-banner-instructions-to-display-icon-route-name-next-turn-guide">Add banner instructions to display icon, route name, next turn guide,...</h3>
+<pre class="language-dart"><code class="language-dart">  BannerInstructionView(
+    routeProgressEvent: routeProgressEvent,
+    instructionIcon: instructionImage,
+  )
+</code></pre>
+<p><img src="https://github.com/vietmap-company/vietmap-flutter-navigation/raw/main/images/banner_instruction_en.png" alt="Banner instruction view"></p>
+<h3 id="add-the-bottom-view-which-contains-the-overview-route-recenter-and-the-stop-navigation-button">Add the bottom view, which contains the overview route, recenter, and the stop navigation button.</h3>
+<pre class="language-dart"><code class="language-dart">  BottomActionView(
+    recenterButton: recenterButton,
+    controller: _navigationController, 
+    routeProgressEvent: routeProgressEvent
+  )
+</code></pre>
+<p><img src="https://github.com/vietmap-company/vietmap-flutter-navigation/raw/main/images/bottom_action_en.png" alt="Bottom action">
+You can customize all of the widgets above to fit your design.
+All data is provided by the <code>routeProgressEvent</code> variable.</p>
+<h3 id="add-the-dispose-function-for-the-navigation-controller">Add the dispose function for the navigation controller</h3>
+<pre class="language-dart"><code class="language-dart">  @override
+  void dispose() {
+    _navigationController?.onDispose();
+    super.dispose();
+  }
+</code></pre>
+<h3 id="useful-function">Useful function</h3>
+<ul>
+<li>Build a route and start navigation. The below functions are used to build a route to start navigation.</li>
+</ul>
+<pre class="language-dart"><code class="language-dart">  /// Find a new route between two locations (you can add more than 2 locations)
+  _navigationController?.buildRoute(wayPoints: &lt;LatLng&gt;[currentLocation, destinationLocation]);
+
+  /// Start navigation, call after the buildRoute have a response.
+  _navigationController?.startNavigation();
+
+  /// Find route and start when the api response at least 1 route
+  _navigationController?.buildAndStartNavigation(
+      wayPoints: wayPoints: &lt;LatLng&gt;[currentLocation, destinationLocation],
+      profile: DrivingProfile.drivingTraffic);
+</code></pre>
+<ul>
+<li>Recenter to the current location, overview the route, turn on/off the navigation voice guide, and stop the navigation. The below functions are used to control the navigation and call after the navigation is started.</li>
+</ul>
+<pre class="language-dart"><code class="language-dart">  /// recenter to the user location
+  _navigationController?.recenter();
+
+  /// Overview the route
+  _navigationController?.overview();
+
+  /// Turn on/off the navigation voice guide
+  _navigationController?.mute();
+
+  /// Stop the navigation
+  _navigationController?.finishNavigation();
+</code></pre>
+<h2 id="add-a-marker-to-the-map">Add a marker to the map</h2>
+<p>We provide the <code>addImageMarkers</code> function to add multiple markers to the map</p>
+<ul>
+<li>Add a marker from the asset image</li>
+</ul>
+<h3 id="marker-from-assets-image">Marker from assets image</h3>
+<pre class="language-dart"><code class="language-dart">  /// Add a marker to the map
+  List&lt;NavigationMarker&gt;? markers = await _navigationController?.addImageMarkers([
+    NavigationMarker(
+        imagePath: 'assets/50.png',
+      latLng: const LatLng(10.762528, 106.653099)),
+    NavigationMarker(
+        imagePath: 'assets/40.png',
+        latLng: const LatLng(10.762528, 106.753099)),
+  ]);
+</code></pre>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<ul>
+<li>We strongly recommend you call the <strong>_navigationController?.buildRouteAndStartNavigation()</strong> in a <code>button</code> or <code>onMapRendered</code> callback, which is called when the map is rendered successfully to ensure that the application does not crash while executing some function while our SDK is rendering the map.</li>
+</ul>
+<pre class="language-dart"><code class="language-dart">  onMapRendered: () {
+    _navigationController?.buildAndStartNavigation(
+    wayPoints: wayPoints: &lt;Waypoint&gt;[waypoint1,waypoint2],
+    profile: DrivingProfile.drivingTraffic);  
+  }
+</code></pre>
+<ul>
+<li>Please ensure that the location permission has been granted before navigating. We recommend you use the <a href="https://pub.dev/packages/geolocator">geolocator</a> package to handle the location permission and get the current location of the device.</li>
+</ul>
+<p>Demo code <a href="./example/lib/main.dart">here</a></p>
+<p>We have a demo app with <a href="https://pub.dev/packages/flutter_bloc">flutter_bloc</a> and clean architecture pattern <a href="https://github.com/vietmap-company/flutter-navigation-example">here</a>.
+Please clone and run the app to see how it works.</p>
+<p>You can also <a href="https://vmnavigation.page.link/navigation_demo">download the example app</a> to see how it works.</p>
+<h2 id="note-replace-apikey-which-is-provided-by-vietmap-to-all-your_api_key_here-tag-to-the-application-work-normally">Note: Replace apikey which is provided by VietMap to all <code>YOUR_API_KEY_HERE</code> tag to the application work normally</h2>
+<p><a href="https://vietmap.vn/maps-api"><img src="https://bizweb.dktcdn.net/100/415/690/themes/804206/assets/logo.png?1689561872933" height="40"> </a></p>
+Email us: <a href="mailto:maps-api.support@vietmap.vn"></a><a href="mailto:maps-api.support@vietmap.vn">maps-api.support@vietmap.vn</a><p></p>
+<p>Vietmap API and price <a href="https://vietmap.vn/maps-api">here</a></p>
+<p>Contact for <a href="https://vietmap.vn/lien-he">support</a></p>
+<p>Vietmap API document <a href="https://maps.vietmap.vn/docs/map-api/overview/">here</a></p>
+<p>Have a bug to report? <a href="https://github.com/vietmap-company/flutter-map-sdk/issues">Open an issue</a>. If possible, include a full log and information that shows the issue.</p>
+<p>Have a feature request? <a href="https://github.com/vietmap-company/flutter-map-sdk/issues">Open an issue</a>. Tell us what the feature should do and why you want the feature.</p>
+</section>
+
+
+      <section class="summary">
+          <h2>Libraries</h2>
+        <dl>
+          <dt id="controller">
+  <span class="name"><a href="embedded_controller/embedded_controller-library.html">embedded/controller</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="view">
+  <span class="name"><a href="embedded_view/embedded_view-library.html">embedded/view</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="extension">
+  <span class="name"><a href="extension/extension-library.html">extension</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="helpers">
+  <span class="name"><a href="helpers/helpers-library.html">helpers</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="constant">
+  <span class="name"><a href="constant/constant-library.html">models/constant</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="current_location">
+  <span class="name"><a href="models_current_location/models_current_location-library.html">models/current_location</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="direction_route">
+  <span class="name"><a href="models_direction_route/models_direction_route-library.html">models/direction_route</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="events">
+  <span class="name"><a href="models_events/models_events-library.html">models/events</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="marker">
+  <span class="name"><a href="models_marker/models_marker-library.html">models/marker</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="marker_widget">
+  <span class="name"><a href="models_marker_widget/models_marker_widget-library.html">models/marker_widget</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="method_channel_event">
+  <span class="name"><a href="models_method_channel_event/models_method_channel_event-library.html">models/method_channel_event</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="navmode">
+  <span class="name"><a href="models_navmode/models_navmode-library.html">models/navmode</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="options">
+  <span class="name"><a href="models_options/models_options-library.html">models/options</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="route_event">
+  <span class="name"><a href="models_route_event/models_route_event-library.html">models/route_event</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="route_leg">
+  <span class="name"><a href="models_route_leg/models_route_leg-library.html">models/route_leg</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="route_progress_event">
+  <span class="name"><a href="models_route_progress_event/models_route_progress_event-library.html">models/route_progress_event</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="route_step">
+  <span class="name"><a href="models_route_step/models_route_step-library.html">models/route_step</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="voice_units">
+  <span class="name"><a href="models_voice_units/models_voice_units-library.html">models/voice_units</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="way_point">
+  <span class="name"><a href="models_way_point/models_way_point-library.html">models/way_point</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="navigation_plugin">
+  <span class="name"><a href="navigation_plugin/navigation_plugin-library.html">navigation_plugin</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="navigation_plugin_method_channel">
+  <span class="name"><a href="navigation_plugin_method_channel/navigation_plugin_method_channel-library.html">navigation_plugin_method_channel</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="navigation_plugin_platform_interface">
+  <span class="name"><a href="navigation_plugin_platform_interface/navigation_plugin_platform_interface-library.html">navigation_plugin_platform_interface</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="vietmap_flutter_navigation">
+  <span class="name"><a href="vietmap_flutter_navigation/vietmap_flutter_navigation-library.html">vietmap_flutter_navigation</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="banner_instruction">
+  <span class="name"><a href="views_banner_instruction/views_banner_instruction-library.html">views/banner_instruction</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="bottom_action">
+  <span class="name"><a href="views_bottom_action/views_bottom_action-library.html">views/bottom_action</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="navigation_view">
+  <span class="name"><a href="views_navigation_view/views_navigation_view-library.html">views/navigation_view</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+        </dl>
+      </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="https://maps.vietmap.vn">vietmap_flutter_navigation package</a></li>
+</ol>
+
+
+    <h5 class="hidden-xs"><span class="package-name">vietmap_flutter_navigation</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="embedded_controller/embedded_controller-library.html">embedded/controller</a></li>
+      <li><a href="embedded_view/embedded_view-library.html">embedded/view</a></li>
+      <li><a href="extension/extension-library.html">extension</a></li>
+      <li><a href="helpers/helpers-library.html">helpers</a></li>
+      <li><a href="constant/constant-library.html">models/constant</a></li>
+      <li><a href="models_current_location/models_current_location-library.html">models/current_location</a></li>
+      <li><a href="models_direction_route/models_direction_route-library.html">models/direction_route</a></li>
+      <li><a href="models_events/models_events-library.html">models/events</a></li>
+      <li><a href="models_marker/models_marker-library.html">models/marker</a></li>
+      <li><a href="models_marker_widget/models_marker_widget-library.html">models/marker_widget</a></li>
+      <li><a href="models_method_channel_event/models_method_channel_event-library.html">models/method_channel_event</a></li>
+      <li><a href="models_navmode/models_navmode-library.html">models/navmode</a></li>
+      <li><a href="models_options/models_options-library.html">models/options</a></li>
+      <li><a href="models_route_event/models_route_event-library.html">models/route_event</a></li>
+      <li><a href="models_route_leg/models_route_leg-library.html">models/route_leg</a></li>
+      <li><a href="models_route_progress_event/models_route_progress_event-library.html">models/route_progress_event</a></li>
+      <li><a href="models_route_step/models_route_step-library.html">models/route_step</a></li>
+      <li><a href="models_voice_units/models_voice_units-library.html">models/voice_units</a></li>
+      <li><a href="models_way_point/models_way_point-library.html">models/way_point</a></li>
+      <li><a href="navigation_plugin/navigation_plugin-library.html">navigation_plugin</a></li>
+      <li><a href="navigation_plugin_method_channel/navigation_plugin_method_channel-library.html">navigation_plugin_method_channel</a></li>
+      <li><a href="navigation_plugin_platform_interface/navigation_plugin_platform_interface-library.html">navigation_plugin_platform_interface</a></li>
+      <li><a href="vietmap_flutter_navigation/vietmap_flutter_navigation-library.html">vietmap_flutter_navigation</a></li>
+      <li><a href="views_banner_instruction/views_banner_instruction-library.html">views/banner_instruction</a></li>
+      <li><a href="views_bottom_action/views_bottom_action-library.html">views/bottom_action</a></li>
+      <li><a href="views_navigation_view/views_navigation_view-library.html">views/navigation_view</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div>
+
+</main>
+
+<footer>
+  <span class="no-break">
+    vietmap_flutter_navigation
+      2.1.2
+  </span>
+
+  
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

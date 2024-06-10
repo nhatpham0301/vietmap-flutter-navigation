@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the RouteProgressEvent class from the route_progress_event library, for the Dart programming language.">
+  <title>RouteProgressEvent class - route_progress_event library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">vietmap_flutter_navigation</a></li>
+    <li><a href="../models_route_progress_event/models_route_progress_event-library.html">models&#47;route_progress_event.dart</a></li>
+    <li class="self-crumb">RouteProgressEvent class</li>
+  </ol>
+  <div class="self-name">RouteProgressEvent</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="models_route_progress_event&#47;models_route_progress_event-library-sidebar.html"
+    data-below-sidebar="models_route_progress_event&#47;RouteProgressEvent-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">RouteProgressEvent</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>This class contains all progress information at any given time during a navigation session.
+This progress includes information for the current route, leg and step the user is traversing along.
+With every new valid location update, a new route progress will be generated using the latest information.</p>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="RouteProgressEvent" class="callable">
+          <span class="name"><a href="../models_route_progress_event/RouteProgressEvent/RouteProgressEvent.html">RouteProgressEvent</a></span><span class="signature">({<span class="parameter" id="-param-arrived"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">arrived</span>, </span><span class="parameter" id="-param-distanceRemaining"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span> <span class="parameter-name">distanceRemaining</span>, </span><span class="parameter" id="-param-durationRemaining"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span> <span class="parameter-name">durationRemaining</span>, </span><span class="parameter" id="-param-distanceTraveled"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span> <span class="parameter-name">distanceTraveled</span>, </span><span class="parameter" id="-param-currentLegDistanceTraveled"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span> <span class="parameter-name">currentLegDistanceTraveled</span>, </span><span class="parameter" id="-param-currentLegDistanceRemaining"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span> <span class="parameter-name">currentLegDistanceRemaining</span>, </span><span class="parameter" id="-param-currentStepInstruction"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">currentStepInstruction</span>, </span><span class="parameter" id="-param-currentLeg"><span class="type-annotation"><a href="../models_route_leg/RouteLeg-class.html">RouteLeg</a>?</span> <span class="parameter-name">currentLeg</span>, </span><span class="parameter" id="-param-priorLeg"><span class="type-annotation"><a href="../models_route_leg/RouteLeg-class.html">RouteLeg</a>?</span> <span class="parameter-name">priorLeg</span>, </span><span class="parameter" id="-param-remainingLegs"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_route_leg/RouteLeg-class.html">RouteLeg</a></span>&gt;</span>?</span> <span class="parameter-name">remainingLegs</span>, </span><span class="parameter" id="-param-legIndex"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">legIndex</span>, </span><span class="parameter" id="-param-stepIndex"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">stepIndex</span>, </span><span class="parameter" id="-param-isProgressEvent"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">isProgressEvent</span>, </span><span class="parameter" id="-param-currentModifier"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">currentModifier</span>, </span><span class="parameter" id="-param-currentModifierType"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">currentModifierType</span>, </span><span class="parameter" id="-param-distanceToNextTurn"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span> <span class="parameter-name">distanceToNextTurn</span></span>})</span>
+        </dt>
+        <dd>
+          
+        </dd>
+        <dt id="RouteProgressEvent.fromJson" class="callable">
+          <span class="name"><a href="../models_route_progress_event/RouteProgressEvent/RouteProgressEvent.fromJson.html">RouteProgressEvent.fromJson</a></span><span class="signature">(<span class="parameter" id="fromJson-param-json"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span> <span class="parameter-name">json</span></span>)</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="arrived" class="property">
+  <span class="name"><a href="../models_route_progress_event/RouteProgressEvent/arrived.html">arrived</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="currentLeg" class="property">
+  <span class="name"><a href="../models_route_progress_event/RouteProgressEvent/currentLeg.html">currentLeg</a></span>
+  <span class="signature">&#8596; <a href="../models_route_leg/RouteLeg-class.html">RouteLeg</a>?</span>
+  
+
+</dt>
+<dd>
+  Current leg the user is traversing along.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="currentLegDistanceRemaining" class="property">
+  <span class="name"><a href="../models_route_progress_event/RouteProgressEvent/currentLegDistanceRemaining.html">currentLegDistanceRemaining</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="currentLegDistanceTraveled" class="property">
+  <span class="name"><a href="../models_route_progress_event/RouteProgressEvent/currentLegDistanceTraveled.html">currentLegDistanceTraveled</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="currentLocation" class="property">
+  <span class="name"><a href="../models_route_progress_event/RouteProgressEvent/currentLocation.html">currentLocation</a></span>
+  <span class="signature">&#8596; <a href="../models_current_location/CurrentLocation-class.html">CurrentLocation</a>?</span>
+  
+
+</dt>
+<dd>
+  Current location of the user, this is the raw location from the location provider
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="currentModifier" class="property">
+  <span class="name"><a href="../models_route_progress_event/RouteProgressEvent/currentModifier.html">currentModifier</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  currentModifierType and currentModifier is an additional instruction on how to complete the current step.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="currentModifierType" class="property">
+  <span class="name"><a href="../models_route_progress_event/RouteProgressEvent/currentModifierType.html">currentModifierType</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  Current modifier of the step the user is on.
+currentModifierType and currentModifier is an additional instruction on how to complete the current step.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="currentStepInstruction" class="property">
+  <span class="name"><a href="../models_route_progress_event/RouteProgressEvent/currentStepInstruction.html">currentStepInstruction</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  Text instruction for the current step the user is on.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="distanceRemaining" class="property">
+  <span class="name"><a href="../models_route_progress_event/RouteProgressEvent/distanceRemaining.html">distanceRemaining</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="distanceToNextTurn" class="property">
+  <span class="name"><a href="../models_route_progress_event/RouteProgressEvent/distanceToNextTurn.html">distanceToNextTurn</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span>
+  
+
+</dt>
+<dd>
+  Distance to the next turn, in meters.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="distanceTraveled" class="property">
+  <span class="name"><a href="../models_route_progress_event/RouteProgressEvent/distanceTraveled.html">distanceTraveled</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="durationRemaining" class="property">
+  <span class="name"><a href="../models_route_progress_event/RouteProgressEvent/durationRemaining.html">durationRemaining</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="isProgressEvent" class="property">
+  <span class="name"><a href="../models_route_progress_event/RouteProgressEvent/isProgressEvent.html">isProgressEvent</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="legIndex" class="property">
+  <span class="name"><a href="../models_route_progress_event/RouteProgressEvent/legIndex.html">legIndex</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="priorLeg" class="property">
+  <span class="name"><a href="../models_route_progress_event/RouteProgressEvent/priorLeg.html">priorLeg</a></span>
+  <span class="signature">&#8596; <a href="../models_route_leg/RouteLeg-class.html">RouteLeg</a>?</span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="remainingLegs" class="property">
+  <span class="name"><a href="../models_route_progress_event/RouteProgressEvent/remainingLegs.html">remainingLegs</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_route_leg/RouteLeg-class.html">RouteLeg</a></span>&gt;</span>?</span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Type-class.html">Type</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="snappedLocation" class="property">
+  <span class="name"><a href="../models_route_progress_event/RouteProgressEvent/snappedLocation.html">snappedLocation</a></span>
+  <span class="signature">&#8596; <a href="../models_current_location/CurrentLocation-class.html">CurrentLocation</a>?</span>
+  
+
+</dt>
+<dd>
+  Current snapped location of the user, this is the location snapped to the route
+This value will stable if the user is not moving
+The location is always on the route, if the user is off route, the location will be snapped to the nearest point on the route
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="stepIndex" class="property">
+  <span class="name"><a href="../models_route_progress_event/RouteProgressEvent/stepIndex.html">stepIndex</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">vietmap_flutter_navigation</a></li>
+    <li><a href="../models_route_progress_event/models_route_progress_event-library.html">route_progress_event</a></li>
+    <li class="self-crumb">RouteProgressEvent class</li>
+</ol>
+
+
+    <h5>route_progress_event library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    vietmap_flutter_navigation
+      2.1.2
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

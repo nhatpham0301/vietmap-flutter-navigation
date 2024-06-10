@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the toMap method from the MapOptions class, for the Dart programming language.">
+  <title>toMap method - MapOptions class - options library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">vietmap_flutter_navigation</a></li>
+    <li><a href="../../models_options/models_options-library.html">models&#47;options.dart</a></li>
+    <li><a href="../../models_options/MapOptions-class.html">MapOptions</a></li>
+    <li class="self-crumb">toMap method</li>
+  </ol>
+  <div class="self-name">toMap</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="models_options&#47;MapOptions-class-sidebar.html"
+    data-below-sidebar="">
+    <div>
+<h1><span class="kind-method">toMap</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span>
+<span class="name ">toMap</span>(<wbr>)
+
+      
+
+    </section>
+    
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">Map&lt;String, dynamic&gt; toMap() {
+  final optionsMap = &lt;String, dynamic&gt;{};
+  void addIfNonNull(String fieldName, dynamic value) {
+    if (value != null) {
+      optionsMap[fieldName] = value;
+    }
+  }
+
+  addIfNonNull(&#39;apikey&#39;, apiKey);
+  addIfNonNull(&#39;mapStyle&#39;, mapStyle);
+  addIfNonNull(&#39;initialLatitude&#39;, initialLatitude);
+  addIfNonNull(&#39;initialLongitude&#39;, initialLongitude);
+  addIfNonNull(&#39;trackCameraPosition&#39;, trackCameraPosition);
+  addIfNonNull(&#39;language&#39;, language);
+  addIfNonNull(&#39;animateBuildRoute&#39;, animateBuildRoute);
+  addIfNonNull(&#39;longPressDestinationEnabled&#39;, longPressDestinationEnabled);
+  if (customLocationCenterIcon != null) {
+    optionsMap[&#39;customLocationCenterIcon&#39;] = customLocationCenterIcon;
+  }
+
+  if (zoom != null) optionsMap[&#39;zoom&#39;] = zoom;
+  if (bearing != null) optionsMap[&#39;bearing&#39;] = bearing;
+  if (tilt != null) optionsMap[&#39;tilt&#39;] = tilt;
+  if (alternatives != null) {
+    optionsMap[&#39;alternatives&#39;] = alternatives;
+  }
+  if (mode != null) {
+    optionsMap[&#39;mode&#39;] = mode?.toString().split(&#39;.&#39;).last;
+  }
+  if (units != null) {
+    optionsMap[&#39;units&#39;] = units?.toString().split(&#39;.&#39;).last;
+  }
+  if (allowsUTurnAtWayPoints != null) {
+    optionsMap[&#39;allowsUTurnAtWayPoints&#39;] = allowsUTurnAtWayPoints;
+  }
+  if (enableRefresh != null) {
+    optionsMap[&#39;enableRefresh&#39;] = enableRefresh;
+  }
+
+  addIfNonNull(&#39;voiceInstructionsEnabled&#39;, voiceInstructionsEnabled);
+  addIfNonNull(&#39;bannerInstructionsEnabled&#39;, bannerInstructionsEnabled);
+
+  if (mapStyleUrlDay != null) {
+    optionsMap[&#39;mapStyleUrlDay&#39;] = mapStyleUrlDay;
+  }
+  if (mapStyleUrlNight != null) {
+    optionsMap[&#39;mapStyleUrlNight&#39;] = mapStyleUrlNight;
+  }
+  if (simulateRoute != null) {
+    optionsMap[&#39;simulateRoute&#39;] = simulateRoute;
+  }
+  if (isOptimized != null) optionsMap[&#39;isOptimized&#39;] = isOptimized;
+
+  addIfNonNull(&#39;padding&#39;, &lt;double?&gt;[
+    padding?.top,
+    padding?.left,
+    padding?.bottom,
+    padding?.right,
+  ]);
+
+  addIfNonNull(&#39;showReportFeedbackButton&#39;, showReportFeedbackButton);
+  addIfNonNull(&#39;showEndOfRouteFeedback&#39;, showEndOfRouteFeedback);
+
+  addIfNonNull(&#39;isCustomizeUI&#39;, isCustomizeUI);
+  return optionsMap;
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">vietmap_flutter_navigation</a></li>
+    <li><a href="../../models_options/models_options-library.html">options</a></li>
+    <li><a href="../../models_options/MapOptions-class.html">MapOptions</a></li>
+    <li class="self-crumb">toMap method</li>
+</ol>
+
+
+    <h5>MapOptions class</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+</div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    vietmap_flutter_navigation
+      2.1.2
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+
